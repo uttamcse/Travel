@@ -9,7 +9,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: "http://localhost:5173", // Your frontend
+  origin: "http://localhost:5173", 
   credentials: true,
 }));
 
@@ -23,6 +23,7 @@ app.use('/', require('./routes/indexRoutes'));
 app.use('/', require('./routes/tripRoutes'));
 app.use('/', require('./routes/searchRoutes'));
 app.use('/', require('./routes/hotelRoutes'));
+app.use('/', require('./routes/topTouristPlaceRoutes'));
 
 // HTTP server
 const server = http.createServer(app);
