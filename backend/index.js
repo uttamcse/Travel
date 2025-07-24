@@ -22,6 +22,7 @@ app.use(express.static('public'));
 app.use('/', require('./routes/indexRoutes'));
 app.use('/', require('./routes/tripRoutes'));
 app.use('/', require('./routes/searchRoutes'));
+app.use('/', require('./routes/hotelRoutes'));
 
 // HTTP server
 const server = http.createServer(app);

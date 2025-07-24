@@ -5,7 +5,8 @@ const {
   createTrip,
   getTripById,
   updateTrip,
-  deleteTrip
+  deleteTrip,
+  getAllTrips
 } = require("../controllers/tripController");
 
 const routes = [
@@ -29,15 +30,19 @@ const routes = [
     path: "/trips/:tripId",
     handlers: [uploadTripPicture, updateTrip],
   },
-
   // Delete a trip by ID
   {
     method: HttpMethods.DELETE,
     path: "/trips/:tripId",
     handlers: [deleteTrip],
   },
+
+    {
+    method: HttpMethods.GET,
+    path: "/trips",
+    handlers: [getAllTrips],
+  },
 ];
 
 const router = createRouter(routes);
-
 module.exports = router;
