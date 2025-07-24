@@ -24,6 +24,7 @@ app.use('/', require('./routes/tripRoutes'));
 app.use('/', require('./routes/searchRoutes'));
 app.use('/', require('./routes/hotelRoutes'));
 app.use('/', require('./routes/topTouristPlaceRoutes'));
+app.use('/', require('./routes/chatBotRoutes'));
 
 // HTTP server
 const server = http.createServer(app);
